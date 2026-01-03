@@ -1,0 +1,659 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 87px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(9px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #3f393948;
+}
+
+.logo {
+  margin-left: 50px;
+}
+.logo h2 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.categories {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 50px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+}
+
+.home {
+  color: rgb(153, 129, 129);
+  background-color: #000000;
+  /* flex: 1; */
+  height: 100vh;
+}
+
+.headrest {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headrest h1 {
+  font-weight: 300;
+  font-size: 100px;
+  color: white;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+}
+
+.underline {
+  text-decoration: underline; /* підкреслення */
+  text-decoration-color: #ffffff; /* колір підкреслення, якщо хочеш */
+  text-decoration-thickness: 2px; /* товщина лінії */
+  text-underline-offset: 25px; /* відступ від тексту */
+}
+
+.headrest p {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  width: 340px;
+  font-size: 17px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.work {
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.work-text {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
+
+.work-text h1 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.work-text p {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  color: oklab(1 0 0 /0.6);
+}
+.work-blocks {
+  display: flex;
+  gap: 30px; /* відстань між проектами */
+  padding: 50px;
+  flex-wrap: wrap; /* щоб на мобільних переходили вниз */
+  justify-content: center;
+}
+
+.project {
+  flex: 1 1 400px; /* адаптивна ширина, мінімум 400px */
+  padding: 32px;
+  border-radius: 10px;
+  min-height: 400px;
+  display: block; /* <a> стає блочним */
+  text-decoration: none; /* прибрати підкреслення */
+  color: inherit; /* текст не синій */
+  cursor: pointer;
+  transition: box-shadow 0.35s ease, background 0.35s ease;
+}
+.project:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.08);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  outline-offset: -1px;
+}
+
+.block1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url("img/gurt.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.block2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url("img/curs.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.project h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20%;
+}
+
+.tech-tags span {
+  border: 1px solid #ffffff48;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 12px;
+}
+
+.project-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: oklab(1 0 0 /0.7);
+}
+
+.project-content h2 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.project-content p {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: oklab(1 0 0 /0.6);
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 36px;
+  border-radius: 999px;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+
+  background: transparent;
+  transition: color 0.3s ease;
+
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* світлий фон, який виїжджає */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+/* hover */
+.btn:hover::before {
+  transform: translateX(0);
+}
+
+.btn span,
+.btn {
+  z-index: 1;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+.about {
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
+  padding: 100px 80px;
+  background: #000;
+  color: #fff;
+}
+
+.about-title {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+}
+
+.about-subtitle {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: oklab(1 0 0 /0.6);
+}
+
+.about-journey {
+  margin-top: 48px;
+  max-width: 48%;
+}
+
+.about-journey h3 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.about-journey p {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cfcfcf;
+  margin-bottom: 14px;
+}
+
+.about-journey p span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.stat-card {
+  width: calc(50% - 12px);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: oklab(1 0 0/0.02);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stat-card h4 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 56px;
+  color: #ffffff;
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: oklab(1 0 0 /0.6);
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+}
+
+.about-right {
+  display: flex;
+  gap: 50px;
+}
+
+.btn-get {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  margin-top: 40px;
+  padding: 14px 32px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+
+  background: transparent;
+  transition: border-color 0.3s ease;
+
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn-get::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+
+.btn-get:hover::before {
+  transform: translateX(0);
+}
+
+.btn-get:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-get span {
+  position: relative;
+  z-index: 1;
+}
+
+.skills {
+  background-color: #000;
+  height: 90vh;
+  padding: 100px 80px;
+}
+
+.skills h2 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.skills-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 28px;
+  background: oklab(1 0 0/0.02);
+  width: 420px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.card h3 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  color: oklab(1 0 0/0.9);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+
+  margin-bottom: 10px;
+  color: oklab(1 0 0/0.6);
+  position: relative;
+  padding-left: 14px;
+}
+
+.card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6b7280;
+}
+
+.card li strong {
+  color: #e5e7eb;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact {
+  height: 120vh;
+  padding: 0px 80px;
+  background: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+
+.contact-card:hover::before {
+  transform: translateX(0);
+}
+
+.contact-card:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-subtitle {
+  margin: 24px auto 0;
+
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #b3b3b3;
+}
+
+.contact-list {
+  margin: 64px auto 0;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.label {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+  color: oklab(1 0 0/0.5);
+}
+
+.value {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.arrow {
+  opacity: 0.5;
+}
+
+.contact-footer {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  width: 894px;
+  height: 1px;
+  margin: 0 auto 24px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+.contact-note {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+  color: oklab(1 0 0 /0.5);
+}
+
+.footer {
+  background: #000;
+  color: #e6e6e6;
+  padding: 80px 80px 32px;
+  font-family: inherit;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* верхня частина */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 64px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand h3 {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 14px;
+  color: oklab(1 0 0 /0.5);
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.footer-nav,
+.footer-connect {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  color: oklab(1 0 0 /0.6);
+  font-size: 14px;
+}
+
+.footer-nav span,
+.footer-connect span {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: oklab(1 0 0 /0.4);
+  margin-bottom: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* нижня частина */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  font-size: 13px;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  color: oklab(1 0 0 /0.4);
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  font-family: "Inter", "Inter Fallback", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-links a {
+  color: oklab(1 0 0 /0.4);
+}
+
+.footer-connect a,
+.footer-nav a {
+  color: oklab(1 0 0 /0.6);
+}
